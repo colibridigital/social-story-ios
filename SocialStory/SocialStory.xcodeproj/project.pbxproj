@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15DD3DD619E03F7200F063F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DD519E03F7200F063F3 /* CFNetwork.framework */; };
+		15DD3DD819E03F7200F063F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DD719E03F7200F063F3 /* Security.framework */; };
+		15DD3DDA19E03F7200F063F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DD919E03F7200F063F3 /* SystemConfiguration.framework */; };
+		15DD3DDF19E03F7200F063F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3DDE19E03F7200F063F3 /* main.m */; };
+		15DD3DE219E03F7200F063F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3DE119E03F7200F063F3 /* AppDelegate.m */; };
+		15DD3DEA19E03F7200F063F3 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DE919E03F7200F063F3 /* Firebase.framework */; };
+		15DD3DEC19E03F7200F063F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DD3DEB19E03F7200F063F3 /* Images.xcassets */; };
+		15DD3DEF19E03F7200F063F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DD3DED19E03F7200F063F3 /* LaunchScreen.xib */; };
+		15DD3E0519E0413000F063F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DD3E0419E0413000F063F3 /* MainStoryboard.storyboard */; };
+		15DD3E1519E0541B00F063F3 /* SuggestingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E1419E0541B00F063F3 /* SuggestingViewController.m */; };
+		15DD3E1819E0542D00F063F3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E1719E0542D00F063F3 /* MainViewController.m */; };
+		15DD3E3019E0577A00F063F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3E2F19E0577A00F063F3 /* Foundation.framework */; };
+		15DD3E3219E0578100F063F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3E3119E0578100F063F3 /* CoreGraphics.framework */; };
+		15DD3E3C19E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E3519E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.m */; };
+		15DD3E3D19E0579C00F063F3 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E3719E0579C00F063F3 /* TPKeyboardAvoidingScrollView.m */; };
+		15DD3E3E19E0579C00F063F3 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E3919E0579C00F063F3 /* TPKeyboardAvoidingTableView.m */; };
+		15DD3E3F19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E3B19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		15DD3E4119E057C600F063F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3E4019E057C600F063F3 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15DD3DD219E03F7200F063F3 /* SocialStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15DD3DD519E03F7200F063F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		15DD3DD719E03F7200F063F3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		15DD3DD919E03F7200F063F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		15DD3DDD19E03F7200F063F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15DD3DDE19E03F7200F063F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15DD3DE019E03F7200F063F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		15DD3DE119E03F7200F063F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		15DD3DE919E03F7200F063F3 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = /Users/Shared/Firebase/Frameworks/Firebase.framework; sourceTree = "<absolute>"; };
+		15DD3DEB19E03F7200F063F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		15DD3DEE19E03F7200F063F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		15DD3E0419E0413000F063F3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		15DD3E1319E0541B00F063F3 /* SuggestingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestingViewController.h; sourceTree = "<group>"; };
+		15DD3E1419E0541B00F063F3 /* SuggestingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestingViewController.m; sourceTree = "<group>"; };
+		15DD3E1619E0542D00F063F3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		15DD3E1719E0542D00F063F3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		15DD3E2F19E0577A00F063F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		15DD3E3119E0578100F063F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		15DD3E3419E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		15DD3E3519E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		15DD3E3619E0579C00F063F3 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		15DD3E3719E0579C00F063F3 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		15DD3E3819E0579C00F063F3 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		15DD3E3919E0579C00F063F3 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		15DD3E3A19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		15DD3E3B19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		15DD3E4019E057C600F063F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialStory_Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15DD3DCF19E03F7200F063F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DD3E4119E057C600F063F3 /* UIKit.framework in Frameworks */,
+				15DD3E3219E0578100F063F3 /* CoreGraphics.framework in Frameworks */,
+				15DD3E3019E0577A00F063F3 /* Foundation.framework in Frameworks */,
+				15DD3DD819E03F7200F063F3 /* Security.framework in Frameworks */,
+				15DD3DDA19E03F7200F063F3 /* SystemConfiguration.framework in Frameworks */,
+				15DD3DD619E03F7200F063F3 /* CFNetwork.framework in Frameworks */,
+				15DD3DEA19E03F7200F063F3 /* Firebase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15DD3DC919E03F7200F063F3 = {
+			isa = PBXGroup;
+			children = (
+				15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */,
+				15DD3E3319E0579C00F063F3 /* TPKeyboardAvoiding */,
+				15DD3E1619E0542D00F063F3 /* MainViewController.h */,
+				15DD3E1719E0542D00F063F3 /* MainViewController.m */,
+				15DD3E1319E0541B00F063F3 /* SuggestingViewController.h */,
+				15DD3E1419E0541B00F063F3 /* SuggestingViewController.m */,
+				15DD3DDB19E03F7200F063F3 /* SocialStory */,
+				15DD3DD419E03F7200F063F3 /* Frameworks */,
+				15DD3DD319E03F7200F063F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15DD3DD319E03F7200F063F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15DD3DD219E03F7200F063F3 /* SocialStory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15DD3DD419E03F7200F063F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15DD3DE919E03F7200F063F3 /* Firebase.framework */,
+				15DD3E4019E057C600F063F3 /* UIKit.framework */,
+				15DD3E3119E0578100F063F3 /* CoreGraphics.framework */,
+				15DD3E2F19E0577A00F063F3 /* Foundation.framework */,
+				15DD3DD519E03F7200F063F3 /* CFNetwork.framework */,
+				15DD3DD719E03F7200F063F3 /* Security.framework */,
+				15DD3DD919E03F7200F063F3 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15DD3DDB19E03F7200F063F3 /* SocialStory */ = {
+			isa = PBXGroup;
+			children = (
+				15DD3DE019E03F7200F063F3 /* AppDelegate.h */,
+				15DD3DE119E03F7200F063F3 /* AppDelegate.m */,
+				15DD3DEB19E03F7200F063F3 /* Images.xcassets */,
+				15DD3DED19E03F7200F063F3 /* LaunchScreen.xib */,
+				15DD3DDC19E03F7200F063F3 /* Supporting Files */,
+				15DD3E0419E0413000F063F3 /* MainStoryboard.storyboard */,
+			);
+			path = SocialStory;
+			sourceTree = "<group>";
+		};
+		15DD3DDC19E03F7200F063F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15DD3DDD19E03F7200F063F3 /* Info.plist */,
+				15DD3DDE19E03F7200F063F3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15DD3E3319E0579C00F063F3 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				15DD3E3419E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.h */,
+				15DD3E3519E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.m */,
+				15DD3E3619E0579C00F063F3 /* TPKeyboardAvoidingScrollView.h */,
+				15DD3E3719E0579C00F063F3 /* TPKeyboardAvoidingScrollView.m */,
+				15DD3E3819E0579C00F063F3 /* TPKeyboardAvoidingTableView.h */,
+				15DD3E3919E0579C00F063F3 /* TPKeyboardAvoidingTableView.m */,
+				15DD3E3A19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				15DD3E3B19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15DD3DD119E03F7200F063F3 /* SocialStory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15DD3DFE19E03F7200F063F3 /* Build configuration list for PBXNativeTarget "SocialStory" */;
+			buildPhases = (
+				15DD3DCE19E03F7200F063F3 /* Sources */,
+				15DD3DCF19E03F7200F063F3 /* Frameworks */,
+				15DD3DD019E03F7200F063F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialStory;
+			productName = SocialStory;
+			productReference = 15DD3DD219E03F7200F063F3 /* SocialStory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15DD3DCA19E03F7200F063F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Colibri Ltd";
+				TargetAttributes = {
+					15DD3DD119E03F7200F063F3 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 15DD3DCD19E03F7200F063F3 /* Build configuration list for PBXProject "SocialStory" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15DD3DC919E03F7200F063F3;
+			productRefGroup = 15DD3DD319E03F7200F063F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15DD3DD119E03F7200F063F3 /* SocialStory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15DD3DD019E03F7200F063F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DD3DEF19E03F7200F063F3 /* LaunchScreen.xib in Resources */,
+				15DD3E0519E0413000F063F3 /* MainStoryboard.storyboard in Resources */,
+				15DD3DEC19E03F7200F063F3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15DD3DCE19E03F7200F063F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15DD3E3C19E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				15DD3E1519E0541B00F063F3 /* SuggestingViewController.m in Sources */,
+				15DD3E3E19E0579C00F063F3 /* TPKeyboardAvoidingTableView.m in Sources */,
+				15DD3DE219E03F7200F063F3 /* AppDelegate.m in Sources */,
+				15DD3E3D19E0579C00F063F3 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				15DD3E3F19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				15DD3DDF19E03F7200F063F3 /* main.m in Sources */,
+				15DD3E1819E0542D00F063F3 /* MainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15DD3DED19E03F7200F063F3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15DD3DEE19E03F7200F063F3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15DD3DFC19E03F7200F063F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15DD3DFD19E03F7200F063F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15DD3DFF19E03F7200F063F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Shared/Firebase/Frameworks,
+				);
+				GCC_PREFIX_HEADER = SocialStory_Prefix.pch;
+				INFOPLIST_FILE = SocialStory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-licucore",
+					"-lc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15DD3E0019E03F7200F063F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Shared/Firebase/Frameworks,
+				);
+				GCC_PREFIX_HEADER = SocialStory_Prefix.pch;
+				INFOPLIST_FILE = SocialStory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-licucore",
+					"-lc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15DD3DCD19E03F7200F063F3 /* Build configuration list for PBXProject "SocialStory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15DD3DFC19E03F7200F063F3 /* Debug */,
+				15DD3DFD19E03F7200F063F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15DD3DFE19E03F7200F063F3 /* Build configuration list for PBXNativeTarget "SocialStory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15DD3DFF19E03F7200F063F3 /* Debug */,
+				15DD3E0019E03F7200F063F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15DD3DCA19E03F7200F063F3 /* Project object */;
+}
