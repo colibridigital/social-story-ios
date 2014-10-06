@@ -17,7 +17,7 @@
 		15DD3DEF19E03F7200F063F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DD3DED19E03F7200F063F3 /* LaunchScreen.xib */; };
 		15DD3E0519E0413000F063F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DD3E0419E0413000F063F3 /* MainStoryboard.storyboard */; };
 		15DD3E1519E0541B00F063F3 /* SuggestingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E1419E0541B00F063F3 /* SuggestingViewController.m */; };
-		15DD3E1819E0542D00F063F3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E1719E0542D00F063F3 /* MainViewController.m */; };
+		15DD3E1819E0542D00F063F3 /* VotingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E1719E0542D00F063F3 /* VotingViewController.m */; };
 		15DD3E3019E0577A00F063F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3E2F19E0577A00F063F3 /* Foundation.framework */; };
 		15DD3E3219E0578100F063F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3E3119E0578100F063F3 /* CoreGraphics.framework */; };
 		15DD3E3C19E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E3519E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.m */; };
@@ -25,6 +25,7 @@
 		15DD3E3E19E0579C00F063F3 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E3919E0579C00F063F3 /* TPKeyboardAvoidingTableView.m */; };
 		15DD3E3F19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E3B19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		15DD3E4119E057C600F063F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3E4019E057C600F063F3 /* UIKit.framework */; };
+		15DD3E4519E2E51600F063F3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E4419E2E51600F063F3 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +43,8 @@
 		15DD3E0419E0413000F063F3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		15DD3E1319E0541B00F063F3 /* SuggestingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestingViewController.h; sourceTree = "<group>"; };
 		15DD3E1419E0541B00F063F3 /* SuggestingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestingViewController.m; sourceTree = "<group>"; };
-		15DD3E1619E0542D00F063F3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		15DD3E1719E0542D00F063F3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		15DD3E1619E0542D00F063F3 /* VotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotingViewController.h; sourceTree = "<group>"; };
+		15DD3E1719E0542D00F063F3 /* VotingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotingViewController.m; sourceTree = "<group>"; };
 		15DD3E2F19E0577A00F063F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		15DD3E3119E0578100F063F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		15DD3E3419E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
@@ -56,6 +57,8 @@
 		15DD3E3B19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		15DD3E4019E057C600F063F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialStory_Prefix.pch; sourceTree = "<group>"; };
+		15DD3E4319E2E51600F063F3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		15DD3E4419E2E51600F063F3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +82,12 @@
 		15DD3DC919E03F7200F063F3 = {
 			isa = PBXGroup;
 			children = (
+				15DD3E4319E2E51600F063F3 /* MainViewController.h */,
+				15DD3E4419E2E51600F063F3 /* MainViewController.m */,
 				15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */,
 				15DD3E3319E0579C00F063F3 /* TPKeyboardAvoiding */,
-				15DD3E1619E0542D00F063F3 /* MainViewController.h */,
-				15DD3E1719E0542D00F063F3 /* MainViewController.m */,
+				15DD3E1619E0542D00F063F3 /* VotingViewController.h */,
+				15DD3E1719E0542D00F063F3 /* VotingViewController.m */,
 				15DD3E1319E0541B00F063F3 /* SuggestingViewController.h */,
 				15DD3E1419E0541B00F063F3 /* SuggestingViewController.m */,
 				15DD3DDB19E03F7200F063F3 /* SocialStory */,
@@ -181,6 +186,7 @@
 				TargetAttributes = {
 					15DD3DD119E03F7200F063F3 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 24WJ8FSA3Y;
 					};
 				};
 			};
@@ -224,10 +230,11 @@
 				15DD3E1519E0541B00F063F3 /* SuggestingViewController.m in Sources */,
 				15DD3E3E19E0579C00F063F3 /* TPKeyboardAvoidingTableView.m in Sources */,
 				15DD3DE219E03F7200F063F3 /* AppDelegate.m in Sources */,
+				15DD3E4519E2E51600F063F3 /* MainViewController.m in Sources */,
 				15DD3E3D19E0579C00F063F3 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				15DD3E3F19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				15DD3DDF19E03F7200F063F3 /* main.m in Sources */,
-				15DD3E1819E0542D00F063F3 /* MainViewController.m in Sources */,
+				15DD3E1819E0542D00F063F3 /* VotingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Shared/Firebase/Frameworks,
@@ -348,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Shared/Firebase/Frameworks,

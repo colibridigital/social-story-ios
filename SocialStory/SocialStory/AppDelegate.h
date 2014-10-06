@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#define kFirechatNSSugestions @"https://colibristory.firebaseio.com/social-story/1/suggestions"
+#define kFirechatNSVotes @"https://colibristory.firebaseio.com/social-story/1/votes"
+#define kFirechatNSWords @"https://colibristory.firebaseio.com/social-story/1/words"
+#define kFirechatNSStory @"https://colibristory.firebaseio.com/social-story/1/story"
+#define kFirechatNSPhase @"https://colibristory.firebaseio.com/social-story/1/attributes/phase"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
