@@ -21,9 +21,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.storyLine.text = @"Nothing here yet";
+    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
     
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSSugestions];
+    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"snapshot value %@", snapshot.value);
+        
+        [self.storyLine setText:snapshot.value];
+        
+    }];
+    
+    self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
+    
+    [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"snapshot value %@", snapshot.value);
+        
+        self.phase = snapshot.value;
+        
+        if ([self.phase isEqualToString:@"vote"]) {
+            VotingViewController *votingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VotingViewController"];
+            
+            [self presentViewController:votingViewController animated:YES completion:nil];
+        }
+        
+        
+        
+    }];
+    
+   
     
    // [self.suggestingProgress setProgress:0.0 animated:NO];
     
@@ -36,9 +62,34 @@
     
     NSLog(@"show suggestions view");
     
-    self.storyLine.text = @"Nothing here yet";
+    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
     
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSSugestions];
+    NSLog(@"showing story...");
+    
+    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"snapshot value %@", snapshot.value);
+        
+        [self.storyLine setText:snapshot.value];
+        
+    }];
+    
+    self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
+    
+    [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"snapshot value %@", snapshot.value);
+        
+        self.phase = snapshot.value;
+        
+        if ([self.phase isEqualToString:@"vote"]) {
+            VotingViewController *votingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VotingViewController"];
+            
+            [self presentViewController:votingViewController animated:YES completion:nil];
+        }
+        
+    }];
+    
     
    // [self.suggestingProgress setProgress:0.0 animated:NO];
     
@@ -101,13 +152,11 @@
     
     //add the user here
     
+    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSSugestions];
+    
     [[self.firebase childByAppendingPath:[NSString stringWithFormat:@"/%@", @"ingrid"]] setValue: word];
     
     NSLog(@"suggested %@", word);
-    
-    VotingViewController *votingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VotingViewController"];
-    
-    [self presentViewController:votingViewController animated:YES completion:nil];
     
 }
 @end

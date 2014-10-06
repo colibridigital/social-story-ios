@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
 
-@interface VotingViewController : UIViewController {
-    
-}
+@interface VotingViewController : UIViewController 
 @property (nonatomic) IBOutlet UIProgressView *votingProgress;
 @property NSTimer *myTimer;
 
@@ -26,6 +24,10 @@
 
 @property (nonatomic, strong) NSMutableArray* words;
 @property (nonatomic, strong) Firebase* firebase;
+@property (nonatomic, strong) Firebase* firebasePhase;
+
+@property (nonatomic) NSString *phase;
+
 
 - (IBAction)vote1:(id)sender;
 - (IBAction)vote2:(id)sender;

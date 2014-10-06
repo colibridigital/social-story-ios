@@ -22,4 +22,8 @@
 - (IBAction)suggestWord:(id)sender;
 
 @property (nonatomic, strong) Firebase* firebase;
+
+@property (nonatomic, strong) Firebase* firebasePhase;
+
+@property (nonatomic) NSString *phase;
 @end

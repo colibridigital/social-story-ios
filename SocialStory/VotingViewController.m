@@ -18,17 +18,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
-    
-   // self.storyLine.text = @"Nothing here yet";
-    
     
    // self.votingProgress = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
     
-   
+    self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
     
+    [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"snapshot value %@", snapshot.value);
+        
+        self.phase = snapshot.value;
+        
+        if ([self.phase isEqualToString:@"suggest"]) {
+            SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
+            
+            [self presentViewController:suggestingViewController animated:YES completion:nil];
+        }
+        
+        
+        
+    }];
+
+    
+    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
     
     [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         
@@ -41,27 +53,6 @@
     [self setWords];
     
     NSLog(@"words counter : %lu", [self.words count]);
-        
-       /* [self.chat addObject:snapshot.value];
-        
-        NSString *currentStory = @"";
-        
-        self.storyLine.text = currentStory;
-        
-        for (NSString* word in self.chat) {
-        
-            self.storyLine.text = [currentStory stringByAppendingString:word];
-        }
-        
-        [self.storyLine reloadInputViews];
-        
-    }];
-    
-    [self.firebase observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        // Reload the table view so that the intial messages show up
-        [self.storyLine reloadInputViews];
-    }];*/
-
  
  //  [self.votingProgress setProgress:0.0 animated:NO];
     
@@ -77,8 +68,26 @@
     
     NSLog(@"show main view");
     
+    self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
+    
+    [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"snapshot value %@", snapshot.value);
+        
+        self.phase = snapshot.value;
+        
+        if ([self.phase isEqualToString:@"suggest"]) {
+            SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
+            
+            [self presentViewController:suggestingViewController animated:YES completion:nil];
+        }
+        
+        
+        
+    }];
     
     [self.sixthWord setTitle:@"End." forState:UIControlStateNormal];
+
     
     self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
     
@@ -91,8 +100,7 @@
     }];
     
     [self setWords];
-    
-   // self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSVotes];
+   
     
     //    [self.votingProgress setProgress:0.0 animated:NO];
     
@@ -220,11 +228,6 @@
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.firstWord.titleLabel.text];
     
     NSLog(@"voted %@", self.firstWord.titleLabel.text);
-
-    
-    SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
-    
-    [self presentViewController:suggestingViewController animated:YES completion:nil];
 }
 
 - (IBAction)vote2:(id)sender {
@@ -234,11 +237,7 @@
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.secondWord.titleLabel.text];
     
     NSLog(@"voted %@", self.secondWord.titleLabel.text);
-    
-    
-    SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
-    
-    [self presentViewController:suggestingViewController animated:YES completion:nil];
+  
 
 }
 
@@ -250,12 +249,7 @@
     
     NSLog(@"voted %@", self.thirdWord.titleLabel.text);
     
-    
-    SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
-    
-    [self presentViewController:suggestingViewController animated:YES completion:nil];
-
-}
+   }
 
 - (IBAction)vote4:(id)sender {
     //add the user here
@@ -264,11 +258,7 @@
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.forthWord.titleLabel.text];
     
     NSLog(@"voted %@", self.forthWord.titleLabel.text);
-    
-    
-    SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
-    
-    [self presentViewController:suggestingViewController animated:YES completion:nil];
+   
 
 }
 
@@ -279,11 +269,7 @@
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.fifthWord.titleLabel.text];
     
     NSLog(@"voted %@", self.fifthWord.titleLabel.text);
-    
-    
-    SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
-    
-    [self presentViewController:suggestingViewController animated:YES completion:nil];
+  
 }
 
 - (IBAction)vote6:(id)sender {
@@ -293,11 +279,6 @@
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.sixthWord.titleLabel.text];
     
     NSLog(@"voted %@", self.sixthWord.titleLabel.text);
-    
-    
-    SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
-    
-    [self presentViewController:suggestingViewController animated:YES completion:nil];
 
 }
 @end

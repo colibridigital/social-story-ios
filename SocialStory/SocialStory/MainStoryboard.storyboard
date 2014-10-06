@@ -47,7 +47,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="210" id="Be4-6Z-507"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -97,7 +96,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="storyLine" destination="gpi-mB-ynj" id="HNh-5Z-1UD"/>
+                        <outlet property="storyLine" destination="gpi-mB-ynj" id="VK4-Xf-r6E"/>
                         <outlet property="suggestingProgress" destination="Aoy-Y2-51X" id="3SR-Oe-BDZ"/>
                         <outlet property="suggestingWord" destination="ZEu-gf-uYk" id="gn6-Ax-5Ti"/>
                     </connections>
@@ -197,7 +196,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO4-ct-3vH">
                                 <rect key="frame" x="24" y="63" width="552" height="310"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -234,9 +232,6 @@
                                 <state key="normal" title="VOTE">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="voteWord:" destination="TKG-W7-4M0" eventType="touchUpInside" id="nZM-Yo-mcc"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A8-MO-mjt">
                                 <rect key="frame" x="512" y="550" width="64" height="30"/>
