@@ -21,6 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.suggestingProgress setProgress:0.0 animated:NO];
+    
+    [self startCount];
     
     self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
     
@@ -28,11 +31,17 @@
         
         self.phase = snapshot.value;
         
+        
+        [self.myOtherTimer invalidate];
+        self.myOtherTimer = nil;
+
+        
         if ([self.phase isEqualToString:@"vote"]) {
             VotingViewController *votingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VotingViewController"];
             
             [self presentViewController:votingViewController animated:YES completion:nil];
         }
+        
         
     }];
     
@@ -46,10 +55,6 @@
         
     }];
 
-    
-   // [self.suggestingProgress setProgress:0.0 animated:NO];
-    
-    //[self startCount];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -57,6 +62,10 @@
     [super viewDidAppear:YES];
     
     NSLog(@"show suggestions view");
+    
+    [self.suggestingProgress setProgress:0.0 animated:NO];
+    
+    [self startCount];
     
     self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
     
@@ -97,12 +106,7 @@
         self.storyLine.text = snapshot.value;
         
     }];
-
     
-    
-   // [self.suggestingProgress setProgress:0.0 animated:NO];
-    
-   // [self startCount];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,18 +116,18 @@
 
 - (void)startCount
 {
-    self.myOtherTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateUI:) userInfo:nil repeats:YES];
+    self.myOtherTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(updateUI:) userInfo:nil repeats:YES];
 }
 
 - (void)updateUI:(NSTimer *)timer
 {
     static int count =0; count++;
     
-    if (count <=10)
+    if (count <=30)
     {
-        NSLog(@"suggesting count %i", count);
+        NSLog(@"%i", count);
         
-        [self.suggestingProgress setProgress:(float)count/10.0f animated:YES];
+        [self.suggestingProgress setProgress:(float)count/30.0f animated:YES];
         
         //self.votingProgress.progress = (float)count/10.0f;
     } else
@@ -132,15 +136,6 @@
         [self.myOtherTimer invalidate];
         self.myOtherTimer = nil;
         
-       /* MainViewController *mainViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
-        
-        [self presentViewController:mainViewController animated:YES completion:nil];*/
-        
-       // [self performSegueWithIdentifier:@"MainViewController" sender:self];
-        
-       /* [self addChildViewController:mainViewController];
-        [self.view addSubview:mainViewController.view];
-        [mainViewController didMoveToParentViewController:self];*/
     }
 }
 

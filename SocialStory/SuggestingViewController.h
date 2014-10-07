@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIProgressView *suggestingProgress;
 
-@property NSTimer *myOtherTimer;
+@property (weak, nonatomic) NSTimer *myOtherTimer;
 
 @property (weak, nonatomic) IBOutlet UITextView *storyLine;
 

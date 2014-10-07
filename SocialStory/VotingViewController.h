@@ -11,7 +11,7 @@
 
 @interface VotingViewController : UIViewController 
 @property (nonatomic) IBOutlet UIProgressView *votingProgress;
-@property NSTimer *myTimer;
+@property (weak, nonatomic) NSTimer *myTimer;
 
 @property (weak, nonatomic) IBOutlet UIButton *firstWord;
 @property (weak, nonatomic) IBOutlet UIButton *secondWord;
