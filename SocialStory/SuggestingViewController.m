@@ -21,21 +21,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
-    
-    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-        
-        NSLog(@"snapshot value %@", snapshot.value);
-        
-        [self.storyLine setText:snapshot.value];
-        
-    }];
     
     self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
     
     [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        
-        NSLog(@"snapshot value %@", snapshot.value);
         
         self.phase = snapshot.value;
         
@@ -45,11 +34,18 @@
             [self presentViewController:votingViewController animated:YES completion:nil];
         }
         
-        
-        
     }];
     
-   
+    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
+    
+    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"snapshot value %@", snapshot.value);
+        
+        self.storyLine.text = snapshot.value;
+        
+    }];
+
     
    // [self.suggestingProgress setProgress:0.0 animated:NO];
     
@@ -66,11 +62,11 @@
     
     NSLog(@"showing story...");
     
-    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+    [self.firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
         NSLog(@"snapshot value %@", snapshot.value);
         
-        [self.storyLine setText:snapshot.value];
+        self.storyLine.text = snapshot.value;
         
     }];
     
@@ -89,6 +85,19 @@
         }
         
     }];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
+    
+    NSLog(@"showing story...");
+    
+    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"snapshot value %@", snapshot.value);
+        
+        self.storyLine.text = snapshot.value;
+        
+    }];
+
     
     
    // [self.suggestingProgress setProgress:0.0 animated:NO];
