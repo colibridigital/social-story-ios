@@ -31,7 +31,6 @@
         
         self.phase = snapshot.value;
         
-        
         [self.myOtherTimer invalidate];
         self.myOtherTimer = nil;
 
@@ -150,6 +149,16 @@
 }
 */
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([self.suggestingWord isFirstResponder] && [touch view] != self.suggestingWord) {
+        [self.suggestingWord resignFirstResponder];
+    }
+    
+    [super touchesBegan:touches withEvent:event];
+}
+
 - (IBAction)suggestWord:(id)sender {
     
     NSString *word = self.suggestingWord.text;
@@ -161,6 +170,8 @@
     [[self.firebase childByAppendingPath:[NSString stringWithFormat:@"/%@", @"ingrid"]] setValue: word];
     
     NSLog(@"suggested %@", word);
+    
+   // [sender resignFirstResponder];
     
 }
 @end
