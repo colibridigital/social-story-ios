@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) Firebase* firebase;
 @property (nonatomic) NSString *phase;
+@property (weak, nonatomic) IBOutlet UITableView *topStoriesTableView;
+@property (weak, nonatomic) IBOutlet UITableView *myStoriesTableView;
 
 @end

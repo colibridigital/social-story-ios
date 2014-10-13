@@ -22,12 +22,16 @@
    // self.votingProgress = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
     
     
-      [self.votingProgress setProgress:0.0 animated:NO];
+    [self.votingProgress setProgress:0.0 animated:NO];
     
      [self startCount];
-
     
-    self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
+
+    NSString* storyID = @"10"; //to get this
+    
+    NSString* firebasePhaseURL = [NSString stringWithFormat:@"%@/%@/attributes/phase", kFirechatNSStories, storyID];
+    
+    self.firebasePhase = [[Firebase alloc] initWithUrl:firebasePhaseURL];
     
     [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
@@ -38,23 +42,21 @@
         [self.myTimer invalidate];
         self.myTimer = nil;
         
-        if ([self.phase isEqualToString:@"suggest"]) {
+        if ([self.phase isEqualToString:@"SUGGEST"]) {
             SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
             
             [self presentViewController:suggestingViewController animated:YES completion:nil];
         }
         
-        
-
-        
     }];
 
+    [self.sixthWord setTitle:@"End." forState:UIControlStateNormal];
     
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
+    NSString* storyURL = [NSString stringWithFormat:@"%@/%@/attributes/story", kFirechatNSStories, storyID];
     
-    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-        
-        NSLog(@"snapshot value %@", snapshot.value);
+    self.firebase = [[Firebase alloc] initWithUrl:storyURL];
+    
+    [self.firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
         self.storyLine.text = snapshot.value;
         
@@ -63,7 +65,8 @@
     [self setWords];
     
     NSLog(@"words counter : %lu", [self.words count]);
- 
+    
+    
     
 }
 
@@ -79,7 +82,11 @@
     
     [self startCount];
     
-    self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
+    NSString* storyID = @"10"; //to get this
+    
+    NSString* firebasePhaseURL = [NSString stringWithFormat:@"%@/%@/attributes/phase", kFirechatNSStories, storyID];
+    
+    self.firebasePhase = [[Firebase alloc] initWithUrl:firebasePhaseURL];
     
     [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
@@ -87,7 +94,7 @@
         
         self.phase = snapshot.value;
         
-        if ([self.phase isEqualToString:@"suggest"]) {
+        if ([self.phase isEqualToString:@"SUGGEST"]) {
             SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
             
             [self presentViewController:suggestingViewController animated:YES completion:nil];
@@ -100,11 +107,11 @@
     [self.sixthWord setTitle:@"End." forState:UIControlStateNormal];
 
     
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
+    NSString* storyURL = [NSString stringWithFormat:@"%@/%@/attributes/story", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:storyURL];
     
     [self.firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        
-        NSLog(@"snapshot value %@", snapshot.value);
         
         self.storyLine.text = snapshot.value;
         
@@ -117,7 +124,12 @@
 }
 
 -(void)setWords {
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSWords];
+    
+    NSString* storyID = @"10"; //to get this
+    
+    NSString* firebaseWordsURL = [NSString stringWithFormat:@"%@/%@/words", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseWordsURL];
     
     // Initialize array that will store chat messages.
     self.words = nil;
@@ -218,7 +230,12 @@
 - (IBAction)vote1:(id)sender {
     
     //add the user here
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSVotes];
+    
+    NSString* storyID = @"10"; //to get this
+    
+    NSString* firebaseVotesURL = [NSString stringWithFormat:@"%@/%@/votes", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseVotesURL];
     
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.firstWord.titleLabel.text];
     
@@ -227,8 +244,11 @@
 
 - (IBAction)vote2:(id)sender {
     //add the user here
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSVotes];
+    NSString* storyID = @"10"; //to get this
     
+    NSString* firebaseVotesURL = [NSString stringWithFormat:@"%@/%@/votes", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseVotesURL];
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.secondWord.titleLabel.text];
     
     NSLog(@"voted %@", self.secondWord.titleLabel.text);
@@ -238,8 +258,11 @@
 
 - (IBAction)vote3:(id)sender {
     //add the user here
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSVotes];
+    NSString* storyID = @"10"; //to get this
     
+    NSString* firebaseVotesURL = [NSString stringWithFormat:@"%@/%@/votes", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseVotesURL];
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.thirdWord.titleLabel.text];
     
     NSLog(@"voted %@", self.thirdWord.titleLabel.text);
@@ -248,8 +271,11 @@
 
 - (IBAction)vote4:(id)sender {
     //add the user here
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSVotes];
+    NSString* storyID = @"10"; //to get this
     
+    NSString* firebaseVotesURL = [NSString stringWithFormat:@"%@/%@/votes", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseVotesURL];
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.forthWord.titleLabel.text];
     
     NSLog(@"voted %@", self.forthWord.titleLabel.text);
@@ -259,8 +285,11 @@
 
 - (IBAction)vote5:(id)sender {
     //add the user here
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSVotes];
+    NSString* storyID = @"10"; //to get this
     
+    NSString* firebaseVotesURL = [NSString stringWithFormat:@"%@/%@/votes", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseVotesURL];
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.fifthWord.titleLabel.text];
     
     NSLog(@"voted %@", self.fifthWord.titleLabel.text);
@@ -269,8 +298,11 @@
 
 - (IBAction)vote6:(id)sender {
     //add the user here
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSVotes];
+    NSString* storyID = @"10"; //to get this
     
+    NSString* firebaseVotesURL = [NSString stringWithFormat:@"%@/%@/votes", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseVotesURL];
     [[self.firebase childByAppendingPath:@"/ingrid"] setValue: self.sixthWord.titleLabel.text];
     
     NSLog(@"voted %@", self.sixthWord.titleLabel.text);

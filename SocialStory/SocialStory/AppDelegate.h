@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#define kFirechatNSSugestions @"https://colibristory.firebaseio.com/social-story/1/suggestions"
-#define kFirechatNSVotes @"https://colibristory.firebaseio.com/social-story/1/votes"
-#define kFirechatNSWords @"https://colibristory.firebaseio.com/social-story/1/words"
-#define kFirechatNSStory @"https://colibristory.firebaseio.com/social-story/1/story"
-#define kFirechatNSPhase @"https://colibristory.firebaseio.com/social-story/1/attributes/phase"
+//#define kFirechatNSSugestions @"https://colibristory.firebaseio.com/social-story/suggestions"
+//#define kFirechatNSVotes @"https://colibristory.firebaseio.com/social-story/votes"
+//#define kFirechatNSWords @"https://colibristory.firebaseio.com/social-story/words"
+#define kFirechatNSStories @"https://colibristory.firebaseio.com/social-story/live-stories"
+//#define kFirechatNSPhase @"https://colibristory.firebaseio.com/social-story/1/attributes/phase"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

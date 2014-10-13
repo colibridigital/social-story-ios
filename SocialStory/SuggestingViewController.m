@@ -25,7 +25,11 @@
     
     [self startCount];
     
-    self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
+     NSString* storyID = @"10"; //to get this
+    
+    NSString* firebasePhaseURL = [NSString stringWithFormat:@"%@/%@/attributes/phase", kFirechatNSStories, storyID];
+    
+    self.firebasePhase = [[Firebase alloc] initWithUrl:firebasePhaseURL];
     
     [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
@@ -35,7 +39,7 @@
         self.myOtherTimer = nil;
 
         
-        if ([self.phase isEqualToString:@"vote"]) {
+        if ([self.phase isEqualToString:@"VOTE"]) {
             VotingViewController *votingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VotingViewController"];
             
             [self presentViewController:votingViewController animated:YES completion:nil];
@@ -44,11 +48,13 @@
         
     }];
     
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
+   
+    
+    NSString* storyURL = [NSString stringWithFormat:@"%@/%@/attributes/story", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:storyURL];
     
     [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-        
-        NSLog(@"snapshot value %@", snapshot.value);
         
         self.storyLine.text = snapshot.value;
         
@@ -66,19 +72,24 @@
     
     [self startCount];
     
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
+    NSString* storyID = @"10"; //to get this
+    
+    NSString* storyURL = [NSString stringWithFormat:@"%@/%@/attributes/story", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:storyURL];
     
     NSLog(@"showing story...");
     
-    [self.firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        
-        NSLog(@"snapshot value %@", snapshot.value);
+    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         
         self.storyLine.text = snapshot.value;
         
     }];
     
-    self.firebasePhase = [[Firebase alloc] initWithUrl:kFirechatNSPhase];
+    NSString* firebasePhaseURL = [NSString stringWithFormat:@"%@/%@/attributes/phase", kFirechatNSStories, storyID];
+    
+    self.firebasePhase = [[Firebase alloc] initWithUrl:firebasePhaseURL];
+
     
     [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
@@ -86,23 +97,11 @@
         
         self.phase = snapshot.value;
         
-        if ([self.phase isEqualToString:@"vote"]) {
+        if ([self.phase isEqualToString:@"VOTE"]) {
             VotingViewController *votingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VotingViewController"];
             
             [self presentViewController:votingViewController animated:YES completion:nil];
         }
-        
-    }];
-    
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSStory];
-    
-    NSLog(@"showing story...");
-    
-    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-        
-        NSLog(@"snapshot value %@", snapshot.value);
-        
-        self.storyLine.text = snapshot.value;
         
     }];
     
@@ -165,7 +164,11 @@
     
     //add the user here
     
-    self.firebase = [[Firebase alloc] initWithUrl:kFirechatNSSugestions];
+    NSString* storyID = @"10"; //to get this
+    
+    NSString* firebaseSuggestionsURL = [NSString stringWithFormat:@"%@/%@/suggestions", kFirechatNSStories, storyID];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseSuggestionsURL];
     
     [[self.firebase childByAppendingPath:[NSString stringWithFormat:@"/%@", @"ingrid"]] setValue: word];
     
