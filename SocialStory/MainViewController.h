@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *topStoriesTableView;
 @property (weak, nonatomic) IBOutlet UITableView *myStoriesTableView;
 @property (nonatomic) IBOutlet NSMutableArray *stories;
+- (IBAction)logoutFromFacebook:(id)sender;
 
 @end

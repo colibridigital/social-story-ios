@@ -151,7 +151,6 @@
             
             NSDictionary* json = [self.stories objectAtIndex:[indexPath row]];
             
-            
             NSLog(@"show json %@", json);
             
             if (json != nil) {
@@ -161,6 +160,8 @@
                 int usersNumber = [[json objectForKey:@"users"] count];
                 
                 cell.usersNumber.text = [NSString stringWithFormat:@"%d",usersNumber];
+                
+                cell.mainViewController = self;
             }
             
         }
@@ -189,4 +190,6 @@
 }
 */
 
+- (IBAction)logoutFromFacebook:(id)sender {
+}
 @end
