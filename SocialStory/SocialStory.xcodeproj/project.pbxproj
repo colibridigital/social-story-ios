@@ -13,12 +13,12 @@
 		1555A38219EAE49D0092DFCF /* star-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1555A38119EAE49D0092DFCF /* star-7.png */; };
 		1555A38719EAEB770092DFCF /* StoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1555A38519EAEB770092DFCF /* StoryCell.m */; };
 		1555A38A19EAEC440092DFCF /* box-outgoing-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1555A38919EAEC440092DFCF /* box-outgoing-7.png */; };
+		158C316D19F3E1CB00097D1F /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158C316C19F3E1CB00097D1F /* Firebase.framework */; };
 		15DD3DD619E03F7200F063F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DD519E03F7200F063F3 /* CFNetwork.framework */; };
 		15DD3DD819E03F7200F063F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DD719E03F7200F063F3 /* Security.framework */; };
 		15DD3DDA19E03F7200F063F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DD919E03F7200F063F3 /* SystemConfiguration.framework */; };
 		15DD3DDF19E03F7200F063F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3DDE19E03F7200F063F3 /* main.m */; };
 		15DD3DE219E03F7200F063F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3DE119E03F7200F063F3 /* AppDelegate.m */; };
-		15DD3DEA19E03F7200F063F3 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DE919E03F7200F063F3 /* Firebase.framework */; };
 		15DD3DEC19E03F7200F063F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DD3DEB19E03F7200F063F3 /* Images.xcassets */; };
 		15DD3DEF19E03F7200F063F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DD3DED19E03F7200F063F3 /* LaunchScreen.xib */; };
 		15DD3E0519E0413000F063F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15DD3E0419E0413000F063F3 /* MainStoryboard.storyboard */; };
@@ -42,6 +42,7 @@
 		1555A38419EAEB770092DFCF /* StoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryCell.h; sourceTree = "<group>"; };
 		1555A38519EAEB770092DFCF /* StoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryCell.m; sourceTree = "<group>"; };
 		1555A38919EAEC440092DFCF /* box-outgoing-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box-outgoing-7.png"; sourceTree = "<group>"; };
+		158C316C19F3E1CB00097D1F /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		15DD3DD219E03F7200F063F3 /* SocialStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DD3DD519E03F7200F063F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		15DD3DD719E03F7200F063F3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -50,7 +51,6 @@
 		15DD3DDE19E03F7200F063F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15DD3DE019E03F7200F063F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15DD3DE119E03F7200F063F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		15DD3DE919E03F7200F063F3 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = /Users/Shared/Firebase/Frameworks/Firebase.framework; sourceTree = "<absolute>"; };
 		15DD3DEB19E03F7200F063F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15DD3DEE19E03F7200F063F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		15DD3E0419E0413000F063F3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -79,13 +79,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158C316D19F3E1CB00097D1F /* Firebase.framework in Frameworks */,
 				15DD3E4119E057C600F063F3 /* UIKit.framework in Frameworks */,
 				15DD3E3219E0578100F063F3 /* CoreGraphics.framework in Frameworks */,
 				15DD3E3019E0577A00F063F3 /* Foundation.framework in Frameworks */,
 				15DD3DD819E03F7200F063F3 /* Security.framework in Frameworks */,
 				15DD3DDA19E03F7200F063F3 /* SystemConfiguration.framework in Frameworks */,
 				15DD3DD619E03F7200F063F3 /* CFNetwork.framework in Frameworks */,
-				15DD3DEA19E03F7200F063F3 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +143,7 @@
 		15DD3DD419E03F7200F063F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				15DD3DE919E03F7200F063F3 /* Firebase.framework */,
+				158C316C19F3E1CB00097D1F /* Firebase.framework */,
 				15DD3E4019E057C600F063F3 /* UIKit.framework */,
 				15DD3E3119E0578100F063F3 /* CoreGraphics.framework */,
 				15DD3E2F19E0577A00F063F3 /* Foundation.framework */,
@@ -380,6 +380,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Shared/Firebase/Frameworks,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = SocialStory_Prefix.pch;
 				INFOPLIST_FILE = SocialStory/Info.plist;
@@ -402,6 +403,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Shared/Firebase/Frameworks,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = SocialStory_Prefix.pch;
 				INFOPLIST_FILE = SocialStory/Info.plist;
