@@ -113,19 +113,35 @@
 			name = StoryCell;
 			sourceTree = "<group>";
 		};
+		15CBB5B919F3E318000B7B54 /* VotingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				15DD3E1619E0542D00F063F3 /* VotingViewController.h */,
+				15DD3E1719E0542D00F063F3 /* VotingViewController.m */,
+			);
+			name = VotingViewController;
+			sourceTree = "<group>";
+		};
+		15CBB5BA19F3E326000B7B54 /* SuggestingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				15DD3E1319E0541B00F063F3 /* SuggestingViewController.h */,
+				15DD3E1419E0541B00F063F3 /* SuggestingViewController.m */,
+			);
+			name = SuggestingViewController;
+			sourceTree = "<group>";
+		};
 		15DD3DC919E03F7200F063F3 = {
 			isa = PBXGroup;
 			children = (
+				15CBB5BA19F3E326000B7B54 /* SuggestingViewController */,
+				15CBB5B919F3E318000B7B54 /* VotingViewController */,
 				1555A38319EAEB4C0092DFCF /* StoryCell */,
 				1555A37A19EAE3390092DFCF /* Resources */,
 				15DD3E4319E2E51600F063F3 /* MainViewController.h */,
 				15DD3E4419E2E51600F063F3 /* MainViewController.m */,
 				15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */,
 				15DD3E3319E0579C00F063F3 /* TPKeyboardAvoiding */,
-				15DD3E1619E0542D00F063F3 /* VotingViewController.h */,
-				15DD3E1719E0542D00F063F3 /* VotingViewController.m */,
-				15DD3E1319E0541B00F063F3 /* SuggestingViewController.h */,
-				15DD3E1419E0541B00F063F3 /* SuggestingViewController.m */,
 				15DD3DDB19E03F7200F063F3 /* SocialStory */,
 				15DD3DD419E03F7200F063F3 /* Frameworks */,
 				15DD3DD319E03F7200F063F3 /* Products */,

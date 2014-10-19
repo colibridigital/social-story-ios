@@ -29,7 +29,7 @@
 
     NSString* storyID = @"10"; //to get this
     
-    NSString* firebasePhaseURL = [NSString stringWithFormat:@"%@/%@/attributes/phase", kFirechatNSStories, storyID];
+    NSString* firebasePhaseURL = [NSString stringWithFormat:@"%@/%@/phase", kFirechatNSStories, storyID];
     
     self.firebasePhase = [[Firebase alloc] initWithUrl:firebasePhaseURL];
     
@@ -52,7 +52,7 @@
 
     [self.sixthWord setTitle:@"End." forState:UIControlStateNormal];
     
-    NSString* storyURL = [NSString stringWithFormat:@"%@/%@/attributes/story", kFirechatNSStories, storyID];
+    NSString* storyURL = [NSString stringWithFormat:@"%@/%@/story", kFirechatNSStories, storyID];
     
     self.firebase = [[Firebase alloc] initWithUrl:storyURL];
     
@@ -84,7 +84,7 @@
     
     NSString* storyID = @"10"; //to get this
     
-    NSString* firebasePhaseURL = [NSString stringWithFormat:@"%@/%@/attributes/phase", kFirechatNSStories, storyID];
+    NSString* firebasePhaseURL = [NSString stringWithFormat:@"%@/%@/phase", kFirechatNSStories, storyID];
     
     self.firebasePhase = [[Firebase alloc] initWithUrl:firebasePhaseURL];
     
@@ -107,7 +107,7 @@
     [self.sixthWord setTitle:@"End." forState:UIControlStateNormal];
 
     
-    NSString* storyURL = [NSString stringWithFormat:@"%@/%@/attributes/story", kFirechatNSStories, storyID];
+    NSString* storyURL = [NSString stringWithFormat:@"%@/%@/story", kFirechatNSStories, storyID];
     
     self.firebase = [[Firebase alloc] initWithUrl:storyURL];
     

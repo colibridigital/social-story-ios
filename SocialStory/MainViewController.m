@@ -24,41 +24,99 @@
     
     NSLog(@"in here");
     
+    //NSString* storyID = @"10"; //to get this
+    
+    NSString* firebaseStoriesURL = [NSString stringWithFormat:@"%@", kFirechatNSStories];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseStoriesURL];
+    
+    // Initialize array that will store chat messages.
+    self.stories = nil;
+    self.stories = [[NSMutableArray alloc] init];
+    
+    NSLog(@"in the main view %@", firebaseStoriesURL);
     
     
-    
-    //do this so it listen from any view and works accordingly
-    
-   /* NSString* storyID = @"10"; //to get this
-    
-    NSString* storyURL = [NSString stringWithFormat:@"%@/%@/attributes/phase", kFirechatNSStories, storyID];
-    
-    NSLog(@"storyURL: %@", storyURL);
-    
-    self.firebase = [[Firebase alloc] initWithUrl:storyURL];
-    
-    [self.firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void) {
         
-        NSLog(@"snapshot name %@, value %@", snapshot.name, snapshot.value);
-        
-        self.phase = snapshot.value;
-        
-        
-        if ([self.phase isEqualToString:@"SUGGEST"]) {
-            SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
+        dispatch_sync(dispatch_get_main_queue(), ^(void) {
             
-            [self presentViewController:suggestingViewController animated:YES completion:nil];
-        } else if ([self.phase isEqualToString:@"VOTE"]) {
-            VotingViewController *votingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VotingViewController"];
-            
-            [self presentViewController:votingViewController animated:YES completion:nil];
-            
-        }
+            NSLog(@"in the background thread");
+                [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         
-    }];*/
+                   // NSData* data = [[NSData alloc]init];
+                    
+                    NSDictionary* data;
+                    
+                    if (![self.stories containsObject:snapshot.value]) {
+            
+                       // data = (NSData*)snapshot.value;
+                        
+                        data = (NSDictionary*)snapshot.value;
+                        
+                        [self.stories addObject:data];
+                    }
+        
+                  //  NSLog(@"snapshot %@, data %@", snapshot.value, data);
+        
+                    NSLog(@"stories number: %lu", (unsigned long)[self.stories count]);
+        
+                      [self.topStoriesTableView reloadData];
+                }];
+            });
+
+        });
+}
+
+
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+    NSLog(@"in here");
+    
+    //NSString* storyID = @"10"; //to get this
+    
+    NSString* firebaseStoriesURL = [NSString stringWithFormat:@"%@", kFirechatNSStories];
+    
+    self.firebase = [[Firebase alloc] initWithUrl:firebaseStoriesURL];
+    
+    // Initialize array that will store chat messages.
+    self.stories = nil;
+    self.stories = [[NSMutableArray alloc] init];
+    
+    NSLog(@"in the main view %@", firebaseStoriesURL);
     
     
-    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void) {
+        
+        dispatch_sync(dispatch_get_main_queue(), ^(void) {
+            
+            NSLog(@"in the background thread");
+            [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+                
+                // NSData* data = [[NSData alloc]init];
+                
+                NSDictionary* data;
+                
+                if (![self.stories containsObject:snapshot.value]) {
+                    
+                    // data = (NSData*)snapshot.value;
+                    
+                    data = (NSDictionary*)snapshot.value;
+                    
+                    [self.stories addObject:data];
+                }
+                
+                //  NSLog(@"snapshot %@, data %@", snapshot.value, data);
+                
+                NSLog(@"stories number: %lu", (unsigned long)[self.stories count]);
+                
+                [self.topStoriesTableView reloadData];
+            }];
+        });
+        
+    });
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -70,17 +128,49 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    
+    if (tableView.tag == 0) {
+        return [self.stories count];
+    } else {
+        return 3;
+    }
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"showing cell");
     
-    
     StoryCell* cell = [tableView dequeueReusableCellWithIdentifier:@"STORY" forIndexPath:indexPath];
+    
+    if (tableView.tag == 0) {
+        
+        NSLog(@"in showing top stories cells");
+        
+        if([self.stories objectAtIndex:[indexPath row]] != nil) {
+        
+            NSLog(@"show object to use: %@", [self.stories objectAtIndex:[indexPath row]]);
+            
+            NSDictionary* json = [self.stories objectAtIndex:[indexPath row]];
+            
+            
+            NSLog(@"show json %@", json);
+            
+            if (json != nil) {
+                
+                cell.storyTitle.text = [json objectForKey:@"title"];
+                
+                int usersNumber = [[json objectForKey:@"users"] count];
+                
+                cell.usersNumber.text = [NSString stringWithFormat:@"%d",usersNumber];
+            }
+            
+        }
 
-   
-    // Configure the cell...
+    }
+    
+    NSLog(@"indexPath %li", (long)[indexPath row]);
+
+    
+    // Configure the cell...*/
     return cell;
 }
 
