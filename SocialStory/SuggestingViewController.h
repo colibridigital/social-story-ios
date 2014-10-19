@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIProgressView *suggestingProgress;
 
+@property (weak, nonatomic) IBOutlet UILabel *storyTitle;
 @property (weak, nonatomic) NSTimer *myOtherTimer;
 
 @property (weak, nonatomic) IBOutlet UITextView *storyLine;
@@ -26,4 +27,5 @@
 @property (nonatomic, strong) Firebase* firebasePhase;
 
 @property (nonatomic) NSString *phase;
+@property (nonatomic) NSString *storyID;
 @end

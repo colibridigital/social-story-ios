@@ -72,9 +72,9 @@
 		15DD3E3A19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		15DD3E3B19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		15DD3E4019E057C600F063F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialStory_Prefix.pch; sourceTree = "<group>"; };
-		15DD3E4319E2E51600F063F3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		15DD3E4419E2E51600F063F3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialStory_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		15DD3E4319E2E51600F063F3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
+		15DD3E4419E2E51600F063F3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
 		1A3763DA19F3E31B009D550C /* FacebookAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookAuth.h; sourceTree = "<group>"; };
 		1A3763DB19F3E31B009D550C /* FacebookAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookAuth.m; sourceTree = "<group>"; };
 		1A3763DD19F3E4F8009D550C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 				1555A37B19EAE35D0092DFCF /* write-simple-7.png */,
 			);
 			name = Resources;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		1555A38319EAEB4C0092DFCF /* StoryCell */ = {
@@ -120,6 +121,7 @@
 				1555A38519EAEB770092DFCF /* StoryCell.m */,
 			);
 			name = StoryCell;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		15CBB5B919F3E318000B7B54 /* VotingViewController */ = {
@@ -129,6 +131,7 @@
 				15DD3E1719E0542D00F063F3 /* VotingViewController.m */,
 			);
 			name = VotingViewController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		15CBB5BA19F3E326000B7B54 /* SuggestingViewController */ = {
@@ -138,19 +141,12 @@
 				15DD3E1419E0541B00F063F3 /* SuggestingViewController.m */,
 			);
 			name = SuggestingViewController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		15DD3DC919E03F7200F063F3 = {
 			isa = PBXGroup;
 			children = (
-				15CBB5BA19F3E326000B7B54 /* SuggestingViewController */,
-				15CBB5B919F3E318000B7B54 /* VotingViewController */,
-				1555A38319EAEB4C0092DFCF /* StoryCell */,
-				1555A37A19EAE3390092DFCF /* Resources */,
-				15DD3E4319E2E51600F063F3 /* MainViewController.h */,
-				15DD3E4419E2E51600F063F3 /* MainViewController.m */,
-				15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */,
-				15DD3E3319E0579C00F063F3 /* TPKeyboardAvoiding */,
 				15DD3DDB19E03F7200F063F3 /* SocialStory */,
 				15DD3DD419E03F7200F063F3 /* Frameworks */,
 				15DD3DD319E03F7200F063F3 /* Products */,
@@ -183,6 +179,14 @@
 		15DD3DDB19E03F7200F063F3 /* SocialStory */ = {
 			isa = PBXGroup;
 			children = (
+				15DD3E3319E0579C00F063F3 /* TPKeyboardAvoiding */,
+				15DD3E4319E2E51600F063F3 /* MainViewController.h */,
+				15DD3E4419E2E51600F063F3 /* MainViewController.m */,
+				15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */,
+				1555A37A19EAE3390092DFCF /* Resources */,
+				1555A38319EAEB4C0092DFCF /* StoryCell */,
+				15CBB5B919F3E318000B7B54 /* VotingViewController */,
+				15CBB5BA19F3E326000B7B54 /* SuggestingViewController */,
 				1A3763D919F3E2D4009D550C /* Auth */,
 				15DD3DE019E03F7200F063F3 /* AppDelegate.h */,
 				15DD3DE119E03F7200F063F3 /* AppDelegate.m */,
@@ -215,7 +219,8 @@
 				15DD3E3A19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
 				15DD3E3B19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
 			);
-			path = TPKeyboardAvoiding;
+			name = TPKeyboardAvoiding;
+			path = ../TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 		1A3763D919F3E2D4009D550C /* Auth */ = {

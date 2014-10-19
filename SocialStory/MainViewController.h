@@ -12,10 +12,15 @@
 @interface MainViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) Firebase* firebase;
+
+@property (nonatomic, strong) Firebase* firebasePhase;
+
 @property (nonatomic) NSString *phase;
 @property (weak, nonatomic) IBOutlet UITableView *topStoriesTableView;
 @property (weak, nonatomic) IBOutlet UITableView *myStoriesTableView;
 @property (nonatomic) IBOutlet NSMutableArray *stories;
+@property (nonatomic) IBOutlet NSMutableArray *storiesIDs;
+@property (nonatomic) NSString* storyID;
 - (IBAction)logoutFromFacebook:(id)sender;
 
 @end

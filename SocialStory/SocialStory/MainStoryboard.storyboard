@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2bd-x6-Ckj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2bd-x6-Ckj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -115,6 +115,7 @@
                     </view>
                     <connections>
                         <outlet property="storyLine" destination="gpi-mB-ynj" id="VK4-Xf-r6E"/>
+                        <outlet property="storyTitle" destination="wJe-4V-jGR" id="VfN-Cm-FlJ"/>
                         <outlet property="suggestingProgress" destination="Aoy-Y2-51X" id="3SR-Oe-BDZ"/>
                         <outlet property="suggestingWord" destination="ZEu-gf-uYk" id="gn6-Ax-5Ti"/>
                     </connections>
@@ -541,6 +542,7 @@
                         <outlet property="secondWord" destination="aTP-oW-gs4" id="W3H-8Z-Mrf"/>
                         <outlet property="sixthWord" destination="DLW-WF-A5W" id="mbR-eC-pq2"/>
                         <outlet property="storyLine" destination="kO4-ct-3vH" id="QV5-oJ-tmU"/>
+                        <outlet property="storyTitle" destination="Srq-0z-JLv" id="PJX-J6-XPQ"/>
                         <outlet property="thirdWord" destination="2iH-Bf-DlT" id="yT7-ZG-eiF"/>
                         <outlet property="votingProgress" destination="duX-uj-Mdm" id="dVK-Oe-PkB"/>
                     </connections>
