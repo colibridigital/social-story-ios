@@ -305,4 +305,8 @@
     NSLog(@"voted %@", self.sixthWord.titleLabel.text);
 
 }
+
+- (IBAction)goBackToMainView:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

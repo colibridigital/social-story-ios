@@ -14,6 +14,7 @@
 		1555A38719EAEB770092DFCF /* StoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1555A38519EAEB770092DFCF /* StoryCell.m */; };
 		1555A38A19EAEC440092DFCF /* box-outgoing-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1555A38919EAEC440092DFCF /* box-outgoing-7.png */; };
 		158C316D19F3E1CB00097D1F /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158C316C19F3E1CB00097D1F /* Firebase.framework */; };
+		15CBB5BC19F417E5000B7B54 /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 15CBB5BB19F417E5000B7B54 /* home-7.png */; };
 		15DD3DD619E03F7200F063F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DD519E03F7200F063F3 /* CFNetwork.framework */; };
 		15DD3DD819E03F7200F063F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DD719E03F7200F063F3 /* Security.framework */; };
 		15DD3DDA19E03F7200F063F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3DD919E03F7200F063F3 /* SystemConfiguration.framework */; };
@@ -46,6 +47,7 @@
 		1555A38519EAEB770092DFCF /* StoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryCell.m; sourceTree = "<group>"; };
 		1555A38919EAEC440092DFCF /* box-outgoing-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box-outgoing-7.png"; sourceTree = "<group>"; };
 		158C316C19F3E1CB00097D1F /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		15CBB5BB19F417E5000B7B54 /* home-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-7.png"; path = "../iconbeast-lite-200/iconbeast lite 200 - png/home-7.png"; sourceTree = "<group>"; };
 		15DD3DD219E03F7200F063F3 /* SocialStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DD3DD519E03F7200F063F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		15DD3DD719E03F7200F063F3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -104,6 +106,7 @@
 		1555A37A19EAE3390092DFCF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				15CBB5BB19F417E5000B7B54 /* home-7.png */,
 				1555A38919EAEC440092DFCF /* box-outgoing-7.png */,
 				1555A38119EAE49D0092DFCF /* star-7.png */,
 				1555A37F19EAE47C0092DFCF /* crown-7.png */,
@@ -292,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15CBB5BC19F417E5000B7B54 /* home-7.png in Resources */,
 				1555A38219EAE49D0092DFCF /* star-7.png in Resources */,
 				1555A37E19EAE4330092DFCF /* circle-user-7.png in Resources */,
 				15DD3DEF19E03F7200F063F3 /* LaunchScreen.xib in Resources */,

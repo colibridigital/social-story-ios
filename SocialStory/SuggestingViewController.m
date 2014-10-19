@@ -54,7 +54,7 @@
     
     self.firebase = [[Firebase alloc] initWithUrl:storyURL];
     
-    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+    [self.firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
         self.storyLine.text = snapshot.value;
         
@@ -89,7 +89,7 @@
     
     NSLog(@"showing story...");
     
-    [self.firebase observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+    [self.firebase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
         self.storyLine.text = snapshot.value;
         
@@ -194,5 +194,8 @@
     
    // [sender resignFirstResponder];
     
+}
+- (IBAction)goBackToMainView:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

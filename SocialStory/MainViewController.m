@@ -124,7 +124,7 @@
         });
         
     });
-
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -154,7 +154,7 @@
         NSLog(@"in showing top stories cells");
         
         if([self.stories objectAtIndex:[indexPath row]] != nil) {
-        
+            
             NSLog(@"show object to use: %@", [self.stories objectAtIndex:[indexPath row]]);
             
             NSDictionary* json = [self.stories objectAtIndex:[indexPath row]];
@@ -173,11 +173,11 @@
             }
             
         }
-
+        
     }
     
     NSLog(@"indexPath %li", (long)[indexPath row]);
-
+    
     
     // Configure the cell...*/
     return cell;
@@ -192,28 +192,32 @@
     
     self.firebasePhase = [[Firebase alloc] initWithUrl:firebasePhaseURL];
     
-    [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+    if (tableView.tag == 0) {
         
-        NSLog(@"snapshot value %@", snapshot.value);
-        
-        self.phase = snapshot.value;
-        
-        if ([self.phase isEqualToString:@"SUGGEST"]) {
-            SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
-            suggestingViewController.storyID = self.storyID;
+        [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
             
-            [self presentViewController:suggestingViewController animated:YES completion:nil];
-
-        } else if ([self.phase isEqualToString:@"VOTE"]) {
-            VotingViewController *votingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VotingViewController"];
-           
-            votingViewController.storyID = self.storyID;
+            NSLog(@"snapshot value %@", snapshot.value);
             
-            [self presentViewController:votingViewController animated:YES completion:nil];
-        }
-        
-    }];
-
+            self.phase = snapshot.value;
+            
+            if ([self.phase isEqualToString:@"SUGGEST"]) {
+                SuggestingViewController *suggestingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SuggestingViewController"];
+                
+                suggestingViewController.storyID = self.storyID;
+                
+                [self presentViewController:suggestingViewController animated:YES completion:nil];
+                
+            } else if ([self.phase isEqualToString:@"VOTE"]) {
+                VotingViewController *votingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VotingViewController"];
+                
+                votingViewController.storyID = self.storyID;
+                
+                [self presentViewController:votingViewController animated:YES completion:nil];
+            }
+            
+        }];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -222,14 +226,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)logoutFromFacebook:(id)sender {
 }

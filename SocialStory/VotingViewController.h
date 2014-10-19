@@ -37,5 +37,6 @@
 - (IBAction)vote5:(id)sender;
 - (IBAction)vote6:(id)sender;
 
+- (IBAction)goBackToMainView:(id)sender;
 
 @end
