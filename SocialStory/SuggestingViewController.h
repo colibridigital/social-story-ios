@@ -26,6 +26,7 @@
 
 @property (nonatomic, strong) Firebase* firebasePhase;
 - (IBAction)goBackToMainView:(id)sender;
+- (IBAction)shareStory:(id)sender;
 
 @property (nonatomic) NSString *phase;
 @property (nonatomic) NSString *storyID;

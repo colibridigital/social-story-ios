@@ -30,6 +30,8 @@
 @property (nonatomic) NSString *phase;
 @property (nonatomic) NSString *storyID;
 
+- (IBAction)shareStory:(id)sender;
+
 - (IBAction)vote1:(id)sender;
 - (IBAction)vote2:(id)sender;
 - (IBAction)vote3:(id)sender;

@@ -12,7 +12,6 @@
 @interface StoryCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *storyTitle;
 @property (weak, nonatomic) IBOutlet UILabel *usersNumber;
-- (IBAction)shareStory:(id)sender;
 
 @property(nonatomic) MainViewController* mainViewController;
 

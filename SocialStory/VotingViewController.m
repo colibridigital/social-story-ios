@@ -243,7 +243,6 @@
 }
 */
 
-
 - (IBAction)vote1:(id)sender {
     
     NSString* firebaseVotesURL = [NSString stringWithFormat:@"%@/%@/votes", kFirechatNSStories, self.storyID];
@@ -308,5 +307,19 @@
 
 - (IBAction)goBackToMainView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (IBAction)shareStory:(id)sender {
+    NSString *textToShare = [NSString stringWithFormat:@"Looking forward to meet you at %@",self.storyTitle.text];
+    
+    NSArray *activityItems = [[NSArray alloc]  initWithObjects:textToShare, nil];
+    
+    UIActivity *activity = [[UIActivity alloc] init];
+    NSArray *applicationActivities = [[NSArray alloc] initWithObjects:activity, nil];
+    UIActivityViewController *activityVC =
+    [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:applicationActivities];
+    [self presentViewController:activityVC animated:YES completion:nil];
+    
 }
 @end
