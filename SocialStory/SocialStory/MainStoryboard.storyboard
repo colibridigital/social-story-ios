@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2bd-x6-Ckj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2bd-x6-Ckj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -41,7 +41,7 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Aoy-Y2-51X">
                                 <rect key="frame" x="109" y="578" width="383" height="2"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Social Story Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJe-4V-jGR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Social Story Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJe-4V-jGR">
                                 <rect key="frame" x="201" y="28" width="198" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="GaR-IC-SEi"/>
@@ -94,6 +94,18 @@
                                     <constraint firstItem="gpi-mB-ynj" firstAttribute="trailing" secondItem="rqr-hi-tvB" secondAttribute="trailingMargin" id="tHi-2U-IZw"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OX9-Hq-QE2">
+                                <rect key="frame" x="16" y="28" width="40" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="dRg-UR-Ymf"/>
+                                </constraints>
+                                <state key="normal" image="home-7.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackToMainView:" destination="Cdj-1d-CYK" eventType="touchUpInside" id="C9T-qZ-PNJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -101,9 +113,12 @@
                             <constraint firstItem="wJe-4V-jGR" firstAttribute="top" secondItem="Vmt-8c-Z3z" secondAttribute="bottom" constant="8" symbolic="YES" id="8mp-YM-FqR"/>
                             <constraint firstItem="rqr-hi-tvB" firstAttribute="leading" secondItem="epi-Pe-Cx2" secondAttribute="leadingMargin" id="A3S-X9-g1V"/>
                             <constraint firstItem="rqr-hi-tvB" firstAttribute="top" secondItem="wJe-4V-jGR" secondAttribute="bottom" constant="8" symbolic="YES" id="AVd-EW-Cgc"/>
+                            <constraint firstItem="rqr-hi-tvB" firstAttribute="top" secondItem="OX9-Hq-QE2" secondAttribute="bottom" constant="8" symbolic="YES" id="IWS-Sz-6N0"/>
                             <constraint firstItem="rqr-hi-tvB" firstAttribute="trailing" secondItem="epi-Pe-Cx2" secondAttribute="trailingMargin" id="Xbb-wC-a1V"/>
+                            <constraint firstItem="OX9-Hq-QE2" firstAttribute="top" secondItem="wJe-4V-jGR" secondAttribute="top" id="aj7-th-uaY"/>
                             <constraint firstItem="Aoy-Y2-51X" firstAttribute="top" secondItem="rqr-hi-tvB" secondAttribute="bottom" constant="95" id="g2W-Ji-sVw"/>
                             <constraint firstItem="rqr-hi-tvB" firstAttribute="centerX" secondItem="Aoy-Y2-51X" secondAttribute="centerX" id="hXr-KD-NR6"/>
+                            <constraint firstItem="OX9-Hq-QE2" firstAttribute="leading" secondItem="rqr-hi-tvB" secondAttribute="leading" id="ifP-mh-HT2"/>
                             <constraint firstItem="rqr-hi-tvB" firstAttribute="centerX" secondItem="wJe-4V-jGR" secondAttribute="centerX" id="veA-0S-Cqk"/>
                             <constraint firstAttribute="bottom" secondItem="Aoy-Y2-51X" secondAttribute="bottom" constant="20" symbolic="YES" id="yut-tb-OKd"/>
                         </constraints>
@@ -115,6 +130,7 @@
                     </view>
                     <connections>
                         <outlet property="storyLine" destination="gpi-mB-ynj" id="VK4-Xf-r6E"/>
+                        <outlet property="storyTitle" destination="wJe-4V-jGR" id="VfN-Cm-FlJ"/>
                         <outlet property="suggestingProgress" destination="Aoy-Y2-51X" id="3SR-Oe-BDZ"/>
                         <outlet property="suggestingWord" destination="ZEu-gf-uYk" id="gn6-Ax-5Ti"/>
                     </connections>
@@ -452,7 +468,7 @@
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Social Story Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srq-0z-JLv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Social Story Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srq-0z-JLv">
                                 <rect key="frame" x="201" y="28" width="198" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="5iD-da-3vG"/>
@@ -477,6 +493,18 @@
                                     <action selector="vote3:" destination="TKG-W7-4M0" eventType="touchUpInside" id="W6X-hn-ff5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Cp-09-JM4">
+                                <rect key="frame" x="16" y="28" width="40" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Zyp-N2-wsG"/>
+                                </constraints>
+                                <state key="normal" image="home-7.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackToMainView:" destination="TKG-W7-4M0" eventType="touchUpInside" id="rSf-hx-vSP"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="788-CY-6mo">
                                 <rect key="frame" x="235" y="523" width="130" height="30"/>
                                 <constraints>
@@ -495,6 +523,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="kO4-ct-3vH" firstAttribute="top" secondItem="7Cp-09-JM4" secondAttribute="bottom" constant="8" symbolic="YES" id="1Z7-ea-AUZ"/>
                             <constraint firstItem="788-CY-6mo" firstAttribute="top" secondItem="2iH-Bf-DlT" secondAttribute="bottom" constant="24" id="3Yx-3K-8DO"/>
                             <constraint firstItem="Srq-0z-JLv" firstAttribute="centerX" secondItem="kO4-ct-3vH" secondAttribute="centerX" id="4rR-dx-raW"/>
                             <constraint firstItem="2iH-Bf-DlT" firstAttribute="top" secondItem="aTP-oW-gs4" secondAttribute="bottom" constant="8" symbolic="YES" id="5ZJ-In-Zep"/>
@@ -510,9 +539,11 @@
                             <constraint firstItem="2iH-Bf-DlT" firstAttribute="baseline" secondItem="DLW-WF-A5W" secondAttribute="baseline" id="SJI-S4-Qee"/>
                             <constraint firstItem="G8e-Ud-B5S" firstAttribute="leading" secondItem="lhc-Ay-sW0" secondAttribute="leading" id="WWv-Xu-F1x"/>
                             <constraint firstItem="lhc-Ay-sW0" firstAttribute="baseline" secondItem="3ZS-3I-8Kr" secondAttribute="baseline" id="WsL-uN-Uas"/>
+                            <constraint firstItem="7Cp-09-JM4" firstAttribute="top" secondItem="Srq-0z-JLv" secondAttribute="top" id="XSc-zJ-xe2"/>
                             <constraint firstItem="kO4-ct-3vH" firstAttribute="centerX" secondItem="duX-uj-Mdm" secondAttribute="centerX" id="asw-q0-LQF"/>
                             <constraint firstItem="3ZS-3I-8Kr" firstAttribute="top" secondItem="kO4-ct-3vH" secondAttribute="bottom" constant="20" id="dYA-zm-sQw"/>
                             <constraint firstItem="kO4-ct-3vH" firstAttribute="centerX" secondItem="788-CY-6mo" secondAttribute="centerX" id="daL-XY-eym"/>
+                            <constraint firstItem="7Cp-09-JM4" firstAttribute="leading" secondItem="aO2-Nc-fwo" secondAttribute="leadingMargin" id="erX-Yh-izE"/>
                             <constraint firstAttribute="bottom" secondItem="duX-uj-Mdm" secondAttribute="bottom" constant="20" symbolic="YES" id="iOu-nR-xBh"/>
                             <constraint firstItem="2iH-Bf-DlT" firstAttribute="leading" secondItem="aTP-oW-gs4" secondAttribute="leading" id="kQM-dX-0CQ"/>
                             <constraint firstItem="kO4-ct-3vH" firstAttribute="top" secondItem="Srq-0z-JLv" secondAttribute="bottom" constant="8" symbolic="YES" id="n8j-MN-V4h"/>
@@ -541,6 +572,7 @@
                         <outlet property="secondWord" destination="aTP-oW-gs4" id="W3H-8Z-Mrf"/>
                         <outlet property="sixthWord" destination="DLW-WF-A5W" id="mbR-eC-pq2"/>
                         <outlet property="storyLine" destination="kO4-ct-3vH" id="QV5-oJ-tmU"/>
+                        <outlet property="storyTitle" destination="Srq-0z-JLv" id="PJX-J6-XPQ"/>
                         <outlet property="thirdWord" destination="2iH-Bf-DlT" id="yT7-ZG-eiF"/>
                         <outlet property="votingProgress" destination="duX-uj-Mdm" id="dVK-Oe-PkB"/>
                     </connections>
@@ -554,6 +586,7 @@
         <image name="box-outgoing-7.png" width="29" height="30"/>
         <image name="circle-user-7.png" width="30" height="30"/>
         <image name="crown-7.png" width="30" height="30"/>
+        <image name="home-7.png" width="30" height="30"/>
         <image name="star-7.png" width="30" height="30"/>
         <image name="write-simple-7.png" width="29" height="30"/>
     </resources>

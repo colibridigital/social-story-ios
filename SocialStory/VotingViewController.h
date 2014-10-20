@@ -12,6 +12,7 @@
 @interface VotingViewController : UIViewController 
 @property (nonatomic) IBOutlet UIProgressView *votingProgress;
 @property (weak, nonatomic) NSTimer *myTimer;
+@property (weak, nonatomic) IBOutlet UILabel *storyTitle;
 
 @property (weak, nonatomic) IBOutlet UIButton *firstWord;
 @property (weak, nonatomic) IBOutlet UIButton *secondWord;
@@ -27,7 +28,7 @@
 @property (nonatomic, strong) Firebase* firebasePhase;
 
 @property (nonatomic) NSString *phase;
-
+@property (nonatomic) NSString *storyID;
 
 - (IBAction)vote1:(id)sender;
 - (IBAction)vote2:(id)sender;
@@ -36,5 +37,6 @@
 - (IBAction)vote5:(id)sender;
 - (IBAction)vote6:(id)sender;
 
+- (IBAction)goBackToMainView:(id)sender;
 
 @end
