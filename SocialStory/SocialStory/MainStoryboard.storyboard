@@ -8,7 +8,7 @@
         <!--Auth View Controller-->
         <scene sceneID="9JE-E1-FDM">
             <objects>
-                <viewController id="2bd-x6-Ckj" customClass="AuthViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthViewController" id="2bd-x6-Ckj" customClass="AuthViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5LV-3U-JD9"/>
                         <viewControllerLayoutGuide type="bottom" id="hbv-Ri-T5J"/>

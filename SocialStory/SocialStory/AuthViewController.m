@@ -25,8 +25,6 @@
     loginView.center = self.view.center;
     [self.view addSubview:loginView];
     
-
-    
     self.ref = [[Firebase alloc] initWithUrl:@"https://colibristory.firebaseio.com"];
     
     // Open a session showing the user the login UI
@@ -44,17 +42,17 @@
                                                               NSLog(@"Login failed. %@", error);
                                                           } else {
                                                               NSLog(@"Logged in! %@", authData);
-                                                              MainViewController *mainViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
-                                                              
-                                                              [self addChildViewController:mainViewController];
-                                                              [self.view addSubview:mainViewController.view];
-                                                              [mainViewController didMoveToParentViewController:self];
+                                                              if(!self.isLoggedIn) {
+                                                                  MainViewController *mainViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+                                                                  
+                                                                  [self addChildViewController:mainViewController];
+                                                                  [self.view addSubview:mainViewController.view];
+                                                                  [mainViewController didMoveToParentViewController:self];
+                                                              }
                                                           }
                                                       }];
                                       }
                                   }];
-    
-
 }
 
 - (void)didReceiveMemoryWarning {

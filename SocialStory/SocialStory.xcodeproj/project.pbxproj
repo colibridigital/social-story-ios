@@ -32,7 +32,6 @@
 		15DD3E3F19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E3B19E0579C00F063F3 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		15DD3E4119E057C600F063F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DD3E4019E057C600F063F3 /* UIKit.framework */; };
 		15DD3E4519E2E51600F063F3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DD3E4419E2E51600F063F3 /* MainViewController.m */; };
-		1A3763DC19F3E31B009D550C /* FacebookAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3763DB19F3E31B009D550C /* FacebookAuth.m */; };
 		1A3763DE19F3E4F8009D550C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3763DD19F3E4F8009D550C /* FacebookSDK.framework */; };
 		1A3763E119F3E847009D550C /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3763E019F3E847009D550C /* AuthViewController.m */; };
 /* End PBXBuildFile section */
@@ -75,8 +74,6 @@
 		15DD3E4219E0598700F063F3 /* SocialStory_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialStory_Prefix.pch; sourceTree = "<group>"; };
 		15DD3E4319E2E51600F063F3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		15DD3E4419E2E51600F063F3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		1A3763DA19F3E31B009D550C /* FacebookAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookAuth.h; sourceTree = "<group>"; };
-		1A3763DB19F3E31B009D550C /* FacebookAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookAuth.m; sourceTree = "<group>"; };
 		1A3763DD19F3E4F8009D550C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		1A3763DF19F3E847009D550C /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
 		1A3763E019F3E847009D550C /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
@@ -221,8 +218,6 @@
 		1A3763D919F3E2D4009D550C /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				1A3763DA19F3E31B009D550C /* FacebookAuth.h */,
-				1A3763DB19F3E31B009D550C /* FacebookAuth.m */,
 				1A3763DF19F3E847009D550C /* AuthViewController.h */,
 				1A3763E019F3E847009D550C /* AuthViewController.m */,
 			);
@@ -305,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A3763DC19F3E31B009D550C /* FacebookAuth.m in Sources */,
 				15DD3E3C19E0579C00F063F3 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				1555A38719EAEB770092DFCF /* StoryCell.m in Sources */,
 				15DD3E1519E0541B00F063F3 /* SuggestingViewController.m in Sources */,

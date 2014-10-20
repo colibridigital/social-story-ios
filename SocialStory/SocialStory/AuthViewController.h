@@ -11,5 +11,6 @@
 
 @interface AuthViewController : UIViewController
 @property (nonatomic, strong) Firebase *ref;
+@property (nonatomic) BOOL isLoggedIn;
 
 @end

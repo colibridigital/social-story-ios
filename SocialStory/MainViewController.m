@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "SuggestingViewController.h"
 #import "VotingViewController.h"
+#import "AuthViewController.h"
 #import "StoryCell.h"
 
 @interface MainViewController ()
@@ -191,5 +192,11 @@
 */
 
 - (IBAction)logoutFromFacebook:(id)sender {
+    AuthViewController *authViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AuthViewController"];
+    
+    authViewController.isLoggedIn = true;
+    [self addChildViewController:authViewController];
+    [self.view addSubview:authViewController.view];
+    [authViewController didMoveToParentViewController:self];
 }
 @end
