@@ -29,6 +29,8 @@
 
 @property (nonatomic) NSString *phase;
 @property (nonatomic) NSString *storyID;
+@property (nonatomic) NSString *voteTime;
+@property (nonatomic) NSString *phaseStartedTime;
 
 - (IBAction)shareStory:(id)sender;
 

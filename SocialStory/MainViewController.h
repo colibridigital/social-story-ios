@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Firebase/Firebase.h>
 
-@interface MainViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface MainViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITabBarDelegate>
 
 @property (nonatomic, strong) Firebase* firebase;
 
@@ -22,5 +22,8 @@
 @property (nonatomic) IBOutlet NSMutableArray *storiesIDs;
 @property (nonatomic) NSString* storyID;
 - (IBAction)logoutFromFacebook:(id)sender;
+@property (weak, nonatomic) IBOutlet UITabBar *menuTabBar;
+
+
 
 @end

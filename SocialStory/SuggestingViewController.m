@@ -136,18 +136,55 @@
 
 - (void)startCount
 {
-    self.myOtherTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(updateUI:) userInfo:nil repeats:YES];
+    NSString* firebaseVoteTime = [NSString stringWithFormat:@"%@/%@/suggestTime", kFirechatNSStories, self.storyID];
+    
+    NSString* firebasePhaseStartedTime = [NSString stringWithFormat:@"%@/%@/phaseStarted", kFirechatNSStories, self.storyID];
+    
+    self.firebasePhase = [[Firebase alloc] initWithUrl:firebaseVoteTime];
+    
+    [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"voteTime value %@", snapshot.value);
+        
+        self.suggestTime = snapshot.value; //string
+        
+    }];
+    
+    self.firebasePhase = [[Firebase alloc] initWithUrl:firebasePhaseStartedTime];
+    
+    [self.firebasePhase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        
+        NSLog(@"phaseStarted value %@", snapshot.value);
+        
+        self.phaseStartedTime = snapshot.value; //string
+        
+    }];
+    
+    
+    double time = [[NSDate date] timeIntervalSince1970]*1000;
+    
+    double phaseTime = [self.phaseStartedTime doubleValue];
+    
+    double remainingTime = (time - phaseTime);
+    
+    NSLog(@"time: %f, phaseTime: %f, remaining time : %f", time, phaseTime, remainingTime);
+    
+    double roundTime = ([self.suggestTime doubleValue] - remainingTime);
+    
+    NSLog(@"remaining time : %f, roundTime in double: %f, roundTime :%i", remainingTime, roundTime, (int)roundTime);
+    
+    self.myOtherTimer = [NSTimer scheduledTimerWithTimeInterval:(int)roundTime target:self selector:@selector(updateUI:) userInfo:nil repeats:YES];
 }
 
 - (void)updateUI:(NSTimer *)timer
 {
     static int count =0; count++;
     
-    if (count <=30)
+    if (count <=10)
     {
         NSLog(@"%i", count);
         
-        [self.suggestingProgress setProgress:(float)count/30.0f animated:YES];
+        [self.suggestingProgress setProgress:(float)count/10.0f animated:YES];
         
         //self.votingProgress.progress = (float)count/10.0f;
     } else

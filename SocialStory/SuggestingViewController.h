@@ -30,4 +30,6 @@
 
 @property (nonatomic) NSString *phase;
 @property (nonatomic) NSString *storyID;
+@property (nonatomic) NSString *suggestTime;
+@property (nonatomic) NSString *phaseStartedTime;
 @end

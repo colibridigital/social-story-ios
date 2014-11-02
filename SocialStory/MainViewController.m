@@ -12,6 +12,7 @@
 #import "VotingViewController.h"
 #import "AuthViewController.h"
 #import "StoryCell.h"
+#import "UsersRankingViewController.h"
 
 @interface MainViewController ()
 
@@ -144,6 +145,7 @@
         return 3;
     }
 }
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"showing cell");
@@ -220,6 +222,22 @@
     }
     
 }
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    
+    NSLog(@"in here");
+    
+    if (item.tag == 1) {
+    
+        UsersRankingViewController *usersRankingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UsersRankingViewController"];
+        
+        [self presentViewController:usersRankingViewController animated:YES completion:nil];
+
+    }
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
