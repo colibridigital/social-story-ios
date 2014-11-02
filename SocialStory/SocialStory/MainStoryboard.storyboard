@@ -543,6 +543,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="rankingsTableView" destination="QoY-7w-JVD" id="nyb-K6-wQj"/>
                         <outlet property="score" destination="BYi-Hn-yhZ" id="aIz-7H-31r"/>
                         <outlet property="userID" destination="X4O-6v-MrH" id="9MC-dv-zNt"/>
                         <outlet property="userRanking" destination="tWH-aH-Vck" id="Hs3-92-Pai"/>

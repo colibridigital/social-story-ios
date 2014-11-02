@@ -12,6 +12,7 @@
 //#define kFirechatNSVotes @"https://colibristory.firebaseio.com/social-story/votes"
 //#define kFirechatNSWords @"https://colibristory.firebaseio.com/social-story/words"
 #define kFirechatNSStories @"https://colibristory.firebaseio.com/social-story/live-stories"
+#define kFirechatNSRanking @"https://colibristory.firebaseio.com/social-story/ranking/topTenUsers"
 //#define kFirechatNSPhase @"https://colibristory.firebaseio.com/social-story/1/attributes/phase"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

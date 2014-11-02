@@ -154,15 +154,15 @@
     
     if (tableView.tag == 0) {
         
-        NSLog(@"in showing top stories cells");
+        //NSLog(@"in showing top stories cells");
         
         if([self.stories objectAtIndex:[indexPath row]] != nil) {
             
-            NSLog(@"show object to use: %@", [self.stories objectAtIndex:[indexPath row]]);
+           // NSLog(@"show object to use: %@", [self.stories objectAtIndex:[indexPath row]]);
             
             NSDictionary* json = [self.stories objectAtIndex:[indexPath row]];
             
-            NSLog(@"show json %@", json);
+           // NSLog(@"show json %@", json);
             
             if (json != nil) {
                 

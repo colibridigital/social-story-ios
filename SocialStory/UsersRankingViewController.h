@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Firebase/Firebase.h>
 
 @interface UsersRankingViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 - (IBAction)goBackHome:(id)sender;
@@ -15,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *rankingsTableView;
 @property (nonatomic) IBOutlet NSMutableArray *rankings;
 @property (weak, nonatomic) IBOutlet UILabel *userRanking;
+
+
+@property (nonatomic, strong) Firebase* firebase;
 
 @end
