@@ -12,6 +12,7 @@
 #import "MainViewController.h"
 
 @interface AuthViewController ()
+-(void)toggleHiddenState:(BOOL)shouldHide;
 
 @end
 
@@ -19,7 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self toggleHiddenState:YES];
+    self.lblLoginStatus.text = @"";
+    
+    self.loginButton.readPermissions = @[@"public_profile", @"email"];
+    self.loginButton.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,39 +34,36 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    FBLoginView *loginView = [[FBLoginView alloc] init];
-    loginView.center = self.view.center;
-    [self.view addSubview:loginView];
-    
-    self.ref = [[Firebase alloc] initWithUrl:@"https://colibristory.firebaseio.com"];
-    
-    // Open a session showing the user the login UI
-    [FBSession openActiveSessionWithReadPermissions:@[@"public_profile"] allowLoginUI:YES
-                                  completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
-                                      
-                                      if (error) {
-                                          NSLog(@"Facebook login failed. Error: %@", error);
-                                      } else if (state == FBSessionStateOpen) {
-                                          NSString *accessToken = session.accessTokenData.accessToken;
-                                          [self.ref authWithOAuthProvider:@"facebook" token:accessToken
-                                                      withCompletionBlock:^(NSError *error, FAuthData *authData) {
-                                                          
-                                                          if (error) {
-                                                              NSLog(@"Login failed. %@", error);
-                                                          } else {
-                                                              NSLog(@"Logged in! %@", authData);
-                                                              if(!self.isLoggedIn) {
-                                                                  MainViewController *mainViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
-                                                                  
-                                                                  [self addChildViewController:mainViewController];
-                                                                  [self.view addSubview:mainViewController.view];
-                                                                  [mainViewController didMoveToParentViewController:self];
-                                                              }
-                                                          }
-                                                      }];
-                                      }
-                                  }];
 
+}
+
+-(void)toggleHiddenState:(BOOL)shouldHide{
+    self.lblUsername.hidden = shouldHide;
+    self.lblEmail.hidden = shouldHide;
+    self.profilePicture.hidden = shouldHide;
+}
+
+-(void)loginViewShowingLoggedInUser:(FBLoginView *)loginView{
+    self.lblLoginStatus.text = @"You are logged in.";
+    
+    [self toggleHiddenState:NO];
+}
+
+-(void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
+    NSLog(@"%@", user);
+    self.profilePicture.profileID = user.id;
+    self.lblUsername.text = user.name;
+    self.lblEmail.text = [user objectForKey:@"email"];
+}
+
+-(void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView{
+    self.lblLoginStatus.text = @"You are logged out";
+    
+    [self toggleHiddenState:YES];
+}
+
+-(void)loginView:(FBLoginView *)loginView handleError:(NSError *)error{
+    NSLog(@"%@", [error localizedDescription]);
 }
 
 /*

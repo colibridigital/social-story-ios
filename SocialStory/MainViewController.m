@@ -253,13 +253,4 @@
  // Pass the selected object to the new view controller.
  }
  */
-
-- (IBAction)logoutFromFacebook:(id)sender {
-    AuthViewController *authViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AuthViewController"];
-    
-    authViewController.isLoggedIn = true;
-    [self addChildViewController:authViewController];
-    [self.view addSubview:authViewController.view];
-    [authViewController didMoveToParentViewController:self];
-}
 @end

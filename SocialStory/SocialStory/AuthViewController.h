@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Firebase/Firebase.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface AuthViewController : UIViewController
-@property (nonatomic, strong) Firebase *ref;
-@property (nonatomic) BOOL isLoggedIn;
+@interface AuthViewController : UIViewController <FBLoginViewDelegate>
+
+@property (weak, nonatomic) IBOutlet FBLoginView *loginButton;
+@property (weak, nonatomic) IBOutlet UILabel *lblLoginStatus;
+@property (weak, nonatomic) IBOutlet UILabel *lblUsername;
+@property (weak, nonatomic) IBOutlet UILabel *lblEmail;
+@property (weak, nonatomic) IBOutlet FBProfilePictureView *profilePicture;
 
 @end
