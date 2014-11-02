@@ -20,7 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated {
     FBLoginView *loginView = [[FBLoginView alloc] init];
     loginView.center = self.view.center;
     [self.view addSubview:loginView];
@@ -53,11 +60,7 @@
                                                       }];
                                       }
                                   }];
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
