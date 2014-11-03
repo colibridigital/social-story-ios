@@ -231,6 +231,8 @@
     
         UsersRankingViewController *usersRankingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"UsersRankingViewController"];
         
+       // [self showViewController:usersRankingViewController sender:self];
+        
         [self presentViewController:usersRankingViewController animated:YES completion:nil];
 
     }
