@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblUsername;
 @property (weak, nonatomic) IBOutlet UILabel *lblEmail;
 @property (weak, nonatomic) IBOutlet FBProfilePictureView *profilePicture;
+- (IBAction)homeButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *homeButtonOutlet;
 
 @end

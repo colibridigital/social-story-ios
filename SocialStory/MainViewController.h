@@ -22,6 +22,7 @@
 @property (nonatomic) IBOutlet NSMutableArray *storiesIDs;
 @property (nonatomic) NSString* storyID;
 @property (weak, nonatomic) IBOutlet UITabBar *menuTabBar;
+- (IBAction)logoutFromFacebook:(id)sender;
 
 
 

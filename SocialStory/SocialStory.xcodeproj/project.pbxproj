@@ -37,6 +37,7 @@
 		15E4F9C319F5ABA000F2F3DF /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E4F9C219F5ABA000F2F3DF /* home-7.png */; };
 		1A3763DE19F3E4F8009D550C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3763DD19F3E4F8009D550C /* FacebookSDK.framework */; };
 		1A3763E119F3E847009D550C /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3763E019F3E847009D550C /* AuthViewController.m */; };
+		1AAB0E141A08282A00BF769B /* connect-arrow-left-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB0E131A08282A00BF769B /* connect-arrow-left-7.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		1A3763DD19F3E4F8009D550C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		1A3763DF19F3E847009D550C /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
 		1A3763E019F3E847009D550C /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		1AAB0E131A08282A00BF769B /* connect-arrow-left-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connect-arrow-left-7.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		1555A37A19EAE3390092DFCF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1AAB0E131A08282A00BF769B /* connect-arrow-left-7.png */,
 				15E4F9C219F5ABA000F2F3DF /* home-7.png */,
 				1555A38919EAEC440092DFCF /* box-outgoing-7.png */,
 				1555A38119EAE49D0092DFCF /* star-7.png */,
@@ -320,6 +323,7 @@
 				15DD3DEC19E03F7200F063F3 /* Images.xcassets in Resources */,
 				1555A37C19EAE35D0092DFCF /* write-simple-7.png in Resources */,
 				1555A38019EAE47C0092DFCF /* crown-7.png in Resources */,
+				1AAB0E141A08282A00BF769B /* connect-arrow-left-7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

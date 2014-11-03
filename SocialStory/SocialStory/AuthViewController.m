@@ -26,6 +26,9 @@
     
     self.loginButton.readPermissions = @[@"public_profile", @"email"];
     self.loginButton.delegate = self;
+    
+    self.homeButtonOutlet.hidden = true;
+    self.homeButtonOutlet.enabled = false;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +37,8 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-
+    self.homeButtonOutlet.hidden = false;
+    self.homeButtonOutlet.enabled = true;
 }
 
 -(void)toggleHiddenState:(BOOL)shouldHide{
@@ -54,12 +58,19 @@
     self.profilePicture.profileID = user.objectID;
     self.lblUsername.text = user.name;
     self.lblEmail.text = [user objectForKey:@"email"];
+    
+    MainViewController *mainViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    
+    [self presentViewController:mainViewController animated:YES completion:nil];
 }
 
 -(void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView{
     self.lblLoginStatus.text = @"You are logged out";
     
     [self toggleHiddenState:YES];
+    
+    self.homeButtonOutlet.hidden = true;
+    self.homeButtonOutlet.enabled = false;
 }
 
 -(void)loginView:(FBLoginView *)loginView handleError:(NSError *)error{
@@ -76,4 +87,9 @@
  }
  */
 
+- (IBAction)homeButton:(id)sender {
+    MainViewController *mainViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    
+    [self presentViewController:mainViewController animated:YES completion:nil];
+}
 @end
