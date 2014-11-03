@@ -18,28 +18,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4L-5F-lYD">
-                                <rect key="frame" x="225" y="239" width="150" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4L-5F-lYD">
+                                <rect key="frame" x="225" y="314" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbI-dR-3eU">
-                                <rect key="frame" x="225" y="268" width="150" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbI-dR-3eU">
+                                <rect key="frame" x="225" y="343" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XDy-Lu-GnH" customClass="FBProfilePictureView">
-                                <rect key="frame" x="50" y="50" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDy-Lu-GnH" customClass="FBProfilePictureView">
+                                <rect key="frame" x="100" y="67" width="400" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZoN-cW-0eG" customClass="FBLoginView">
-                                <rect key="frame" x="218" y="472" width="165" height="74"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZoN-cW-0eG" customClass="FBLoginView">
+                                <rect key="frame" x="200" y="466" width="200" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="XDy-Lu-GnH" secondAttribute="centerX" id="0HK-rr-3Pe"/>
+                            <constraint firstItem="XDy-Lu-GnH" firstAttribute="centerX" secondItem="B4L-5F-lYD" secondAttribute="centerX" id="BuW-aG-mak"/>
+                            <constraint firstItem="ZoN-cW-0eG" firstAttribute="top" secondItem="NbI-dR-3eU" secondAttribute="bottom" constant="91" id="HaP-Fx-EPp"/>
+                            <constraint firstAttribute="centerX" secondItem="B4L-5F-lYD" secondAttribute="centerX" id="JJ6-64-ixO"/>
+                            <constraint firstItem="XDy-Lu-GnH" firstAttribute="centerX" secondItem="3N8-Kt-k7L" secondAttribute="centerX" id="R0J-E6-r15"/>
+                            <constraint firstAttribute="centerX" secondItem="NbI-dR-3eU" secondAttribute="centerX" id="c5p-Vw-XCp"/>
+                            <constraint firstAttribute="bottom" secondItem="XDy-Lu-GnH" secondAttribute="bottom" constant="283" id="d0a-RV-Bfa"/>
+                            <constraint firstAttribute="centerX" secondItem="ZoN-cW-0eG" secondAttribute="centerX" id="eeg-f3-PX4"/>
+                            <constraint firstItem="XDy-Lu-GnH" firstAttribute="top" secondItem="5LV-3U-JD9" secondAttribute="bottom" constant="47" id="h1u-rq-ko3"/>
+                            <constraint firstItem="B4L-5F-lYD" firstAttribute="top" secondItem="XDy-Lu-GnH" secondAttribute="bottom" constant="-3" id="h8t-5c-ule"/>
+                            <constraint firstItem="XDy-Lu-GnH" firstAttribute="leading" secondItem="3N8-Kt-k7L" secondAttribute="leading" constant="100" id="uDu-SO-MMe"/>
+                            <constraint firstItem="XDy-Lu-GnH" firstAttribute="centerX" secondItem="NbI-dR-3eU" secondAttribute="centerX" id="vS5-FB-EFK"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="lblEmail" destination="NbI-dR-3eU" id="2xN-Uh-tAk"/>
