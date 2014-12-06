@@ -37,6 +37,7 @@
 		15E4F9C319F5ABA000F2F3DF /* home-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E4F9C219F5ABA000F2F3DF /* home-7.png */; };
 		1A3763DE19F3E4F8009D550C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3763DD19F3E4F8009D550C /* FacebookSDK.framework */; };
 		1A3763E119F3E847009D550C /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3763E019F3E847009D550C /* AuthViewController.m */; };
+		1A7A90181A337E0F00691C58 /* NewStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A90171A337E0F00691C58 /* NewStoryViewController.m */; };
 		1AAB0E141A08282A00BF769B /* connect-arrow-left-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AAB0E131A08282A00BF769B /* connect-arrow-left-7.png */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		1A3763DD19F3E4F8009D550C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		1A3763DF19F3E847009D550C /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
 		1A3763E019F3E847009D550C /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		1A7A90161A337DF700691C58 /* NewStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewStoryViewController.h; sourceTree = "<group>"; };
+		1A7A90171A337E0F00691C58 /* NewStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewStoryViewController.m; sourceTree = "<group>"; };
 		1AAB0E131A08282A00BF769B /* connect-arrow-left-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connect-arrow-left-7.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +173,7 @@
 		15DD3DC919E03F7200F063F3 = {
 			isa = PBXGroup;
 			children = (
+				1A7A90151A337C6E00691C58 /* NewStoryViewController */,
 				153BB7A31A0687630049AC22 /* RankingsCell */,
 				153BB79F1A0685D90049AC22 /* UsersRankingViewController */,
 				15CBB5BA19F3E326000B7B54 /* SuggestingViewController */,
@@ -254,6 +258,15 @@
 				1A3763E019F3E847009D550C /* AuthViewController.m */,
 			);
 			name = Auth;
+			sourceTree = "<group>";
+		};
+		1A7A90151A337C6E00691C58 /* NewStoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A7A90161A337DF700691C58 /* NewStoryViewController.h */,
+				1A7A90171A337E0F00691C58 /* NewStoryViewController.m */,
+			);
+			name = NewStoryViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +354,7 @@
 				15DD3E3E19E0579C00F063F3 /* TPKeyboardAvoidingTableView.m in Sources */,
 				15DD3DE219E03F7200F063F3 /* AppDelegate.m in Sources */,
 				15DD3E4519E2E51600F063F3 /* MainViewController.m in Sources */,
+				1A7A90181A337E0F00691C58 /* NewStoryViewController.m in Sources */,
 				153BB7A21A0685FD0049AC22 /* UsersRankingViewController.m in Sources */,
 				153BB7A61A06879D0049AC22 /* RankingsCell.m in Sources */,
 				15DD3E3D19E0579C00F063F3 /* TPKeyboardAvoidingScrollView.m in Sources */,
