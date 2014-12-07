@@ -6,8 +6,14 @@
 //  Copyright (c) 2014 Colibri Ltd. All rights reserved.
 //
 
-#ifndef SocialStory_NewStoryViewController_h
-#define SocialStory_NewStoryViewController_h
+#import <UIKit/UIKit.h>
 
+@interface NewStoryViewController : UIViewController
 
-#endif
+@property (weak, nonatomic) IBOutlet UISlider *maxUsersSlider;
+@property (weak, nonatomic) IBOutlet UILabel *maxUsersLabel;
+
+@property (weak, nonatomic) IBOutlet UISlider *numRoundsSlider;
+@property (weak, nonatomic) IBOutlet UILabel *numRoundsLabel;
+
+@end

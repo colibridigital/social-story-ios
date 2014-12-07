@@ -13,6 +13,7 @@
 #import "AuthViewController.h"
 #import "StoryCell.h"
 #import "UsersRankingViewController.h"
+#import "NewStoryViewController.h"
 
 @interface MainViewController ()
 
@@ -220,12 +221,15 @@
             
         }];
     }
-    
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     
-    NSLog(@"in here");
+    if(item.tag == 0) {
+        NewStoryViewController *newStoryViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"NewStoryViewController"];
+        
+        [self presentViewController:newStoryViewController animated:YES completion:nil];
+    }
     
     if (item.tag == 1) {
     
@@ -234,9 +238,7 @@
        // [self showViewController:usersRankingViewController sender:self];
         
         [self presentViewController:usersRankingViewController animated:YES completion:nil];
-
     }
-    
 }
 
 
